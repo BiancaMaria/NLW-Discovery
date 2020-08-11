@@ -1,0 +1,46 @@
+.input-block,
+.textarea-block{
+    position: relative;
+}
+
+.input-block input,
+.select-block select,
+.textarea-block textarea{
+    background: var(--color-input-background);
+    border:1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+    font:1.6rem Archivo;
+    height: 5.6rem;
+    margin-top: 1.6rem;
+    outline: 0;
+    padding: 0 1.6rem;
+    width: 100%;
+    color: var(--color-text-base);
+}
+
+.input-block:focus-within::after,
+.textarea-block:focus-within::after{
+    background: var(--color-primary-light);
+    bottom:0;
+    content: "";
+    height:2px;
+    left:1.6rem;
+    right:1.6rem;
+    position: absolute;
+    width: calc(100% - 3.2rem);
+}
+
+.select-block label,
+.input-block label,
+.textarea-block label{
+
+    color: var(--color-text-complement);
+    font-size: 1.4rem;
+    font-family: Archivo;
+}
+
+.textarea-block textarea{
+    height: 16rem;
+    padding: 1.2rem 1.6rem;
+    resize: vertical;
+}
